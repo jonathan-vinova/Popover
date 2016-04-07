@@ -101,7 +101,6 @@ public class Popover: UIView {
 
   override public func layoutSubviews() {
     super.layoutSubviews()
-    self.create()
   }
 
   private func create() {
@@ -200,6 +199,8 @@ public class Popover: UIView {
     self.addSubview(self.contentView)
     self.containerView.addSubview(self)
 
+    self.create()
+    
     self.transform = CGAffineTransformMakeScale(0.0, 0.0)
     UIView.animateWithDuration(self.animationIn, delay: 0,
       usingSpringWithDamping: 0.7,
